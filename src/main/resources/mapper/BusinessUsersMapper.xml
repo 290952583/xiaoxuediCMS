@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wyait.manage.dao.BusinessUsersMapper" >
+  <resultMap id="BaseResultMap" type="com.wyait.manage.pojo.BusinessUsers" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="school_id" property="schoolId" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="head_img" property="headImg" jdbcType="VARCHAR" />
+    <result column="business_hours" property="businessHours" jdbcType="VARCHAR" />
+    <result column="placard" property="placard" jdbcType="VARCHAR" />
+    <result column="service_phone" property="servicePhone" jdbcType="VARCHAR" />
+    <result column="business_status" property="businessStatus" jdbcType="VARCHAR" />
+    <result column="orders_sum" property="ordersSum" jdbcType="INTEGER" />
+    <result column="business_sum" property="businessSum" jdbcType="DECIMAL" />
+    <result column="withdraw_account" property="withdrawAccount" jdbcType="VARCHAR" />
+    <result column="withdraw_type" property="withdrawType" jdbcType="VARCHAR" />
+    <result column="starting_price" property="startingPrice" jdbcType="DECIMAL" />
+    <result column="distribution_price" property="distributionPrice" jdbcType="DECIMAL" />
+    <result column="business_license" property="businessLicense" jdbcType="VARCHAR" />
+    <result column="auth_status" property="authStatus" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyait.manage.dao.OrdersMapper">
+  <resultMap id="BaseResultMap" type="com.wyait.manage.pojo.Orders">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="delete_time" jdbcType="BIGINT" property="deleteTime" />
+    <result column="op_by" jdbcType="VARCHAR" property="opBy" />
+    <result column="op_time" jdbcType="TIMESTAMP" property="opTime" />
+    <result column="accept_user_id" jdbcType="VARCHAR" property="acceptUserId" />
+    <result column="actual_amount" jdbcType="DECIMAL" property="actualAmount" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="coupon_amount" jdbcType="DECIMAL" property="couponAmount" />
+    <result column="coupon_id" jdbcType="VARCHAR" property="couponId" />
+    <result column="delivery_amount" jdbcType="DECIMAL" property="deliveryAmount" />
+    <result column="finish_time" jdbcType="TIMESTAMP" property="finishTime" />
+    <result column="forecast_time" jdbcType="TIMESTAMP" property="forecastTime" />
+    <result column="order_amount" jdbcType="DECIMAL" property="orderAmount" />
+    <result column="order_no" jdbcType="VARCHAR" property="orderNo" />
+    <result column="pay_type" jdbcType="VARCHAR" property="payType" />
+    <result column="receive_time" jdbcType="TIMESTAMP" property="receiveTime" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+  </resultMap>
+ <!--  <resultMap id="BaseResultMap" type="com.wyait.manage.pojo.Orders">
+    
+      WARNING - @mbg.generated
+   
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="amount" jdbcType="INTEGER" property="amount" />
+    <result column="time" jdbcType="TIMESTAMP" property="time" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="mission_id" jdbcType="VARCHAR" property="missionId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+  </resultMap> -->
+</mapper>

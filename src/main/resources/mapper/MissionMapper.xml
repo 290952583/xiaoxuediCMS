@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyait.manage.dao.MissionMapper">
+  <resultMap id="BaseResultMap" type="com.wyait.manage.pojo.Mission">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="delete_time" jdbcType="BIGINT" property="deleteTime" />
+    <result column="op_by" jdbcType="VARCHAR" property="opBy" />
+    <result column="op_time" jdbcType="TIMESTAMP" property="opTime" />
+    <result column="actual_amount" jdbcType="DECIMAL" property="actualAmount" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="coupon_amount" jdbcType="DECIMAL" property="couponAmount" />
+    <result column="coupon_id" jdbcType="VARCHAR" property="couponId" />
+    <result column="delivery" jdbcType="VARCHAR" property="delivery" />
+    <result column="distribution_time" jdbcType="VARCHAR" property="distributionTime" />
+    <result column="finish_time" jdbcType="TIMESTAMP" property="finishTime" />
+    <result column="get_code" jdbcType="VARCHAR" property="getCode" />
+    <result column="mission_no" jdbcType="VARCHAR" property="missionNo" />
+    <result column="price" jdbcType="DECIMAL" property="price" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="school" jdbcType="VARCHAR" property="school" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="accept_user_id" jdbcType="VARCHAR" property="acceptUserId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+  </resultMap>
+  <!-- <resultMap id="BaseResultMap" type="com.wyait.manage.pojo.Mission">
+    
+      WARNING - @mbg.generated
+   
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="accept_time" jdbcType="TIMESTAMP" property="acceptTime" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="price" jdbcType="INTEGER" property="price" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="time" jdbcType="TIMESTAMP" property="time" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="accept_user_id" jdbcType="VARCHAR" property="acceptUserId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+  </resultMap> -->
+</mapper>

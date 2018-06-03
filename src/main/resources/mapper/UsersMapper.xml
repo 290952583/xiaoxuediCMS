@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyait.manage.dao.UsersMapper">
+  <resultMap id="BaseResultMap" type="com.wyait.manage.pojo.Users">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="auth_status" jdbcType="VARCHAR" property="authStatus" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="sex" jdbcType="CHAR" property="sex" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="balance" jdbcType="INTEGER" property="balance" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="enabled" jdbcType="BIT" property="enabled" />
+    <result column="id_card" jdbcType="VARCHAR" property="idCard" />
+    <result column="invitation_code" jdbcType="VARCHAR" property="invitationCode" />
+    <result column="invitation_count" jdbcType="INTEGER" property="invitationCount" />
+    <result column="school_id" jdbcType="VARCHAR" property="schoolId" />
+    <result column="photo" jdbcType="VARCHAR" property="photo" />
+    <result column="open_id" jdbcType="VARCHAR" property="openId" />
+  </resultMap>
+  
+  	<!--=Start getUsers 分页查询用户列表userSearch -->
+	<select id="getUsers" resultType="com.wyait.manage.entity.UsersRoleDTO">
+		select
+		id, username, mobile, id_card, auth_status, create_time,
+		school_id,
+		sex,name,photo
+		from users
+		<where>
+			<if test="userSearch.umobile!=null and userSearch.umobile!=''">
+				AND mobile =#{userSearch.umobile}
+			</if>
+			<if test="userSearch.uname!=null and userSearch.uname!=''">
+				AND username like CONCAT(CONCAT('%',#{userSearch.uname}),
+				'%')
+			</if>
+			<if
+				test="userSearch.insertTimeStart!=null and userSearch.insertTimeStart!=''">
+				AND create_time &gt;= #{userSearch.insertTimeStart}
+			</if>
+			<if test="userSearch.insertTimeEnd!=null and userSearch.insertTimeEnd!=''">
+				AND create_time &lt;= #{userSearch.insertTimeEnd}
+			</if>
+		</where>
+		ORDER BY create_time DESC
+	</select>
+</mapper>
