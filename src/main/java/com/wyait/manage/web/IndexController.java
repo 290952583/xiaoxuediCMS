@@ -22,7 +22,7 @@ public class IndexController {
 
 	@RequestMapping("/index") public String index() {
 		logger.debug("-------------index------------");
-		return "index";
+		return "home";
 	}
 
 	@RequestMapping("/home") public String toHome() {
